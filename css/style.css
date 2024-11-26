@@ -1,0 +1,237 @@
+/*
+    COLOR PALLETE
+
+    Light Orange        #e3dcd1 or #f5f2f0
+    Black               #252930
+    Orange              #e79041
+    Dark Red            #6d1703
+*/
+
+/* GLOBAL STYLES
+------------------------------------*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* set default to 10px */
+}
+ 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    background: #e3dcd1;
+    margin: 0;
+    font-family: "Amethysta", serif;
+    font-size: 1.8rem; /* equivalent to 18px */
+    line-height: 1.4;
+}
+
+h1, h2, h3 {
+    font-family: "Cinzel", serif;
+    font-weight: 400; /* make default font weight */
+    margin: 0; /* remove all margins */
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.3rem;
+}
+
+/* links */
+a {
+    color: #6d1703;
+}
+
+a:hover {
+    color: #e79041;
+    text-decoration: none;
+}
+
+footer a {
+    color: #e79041
+}
+
+footer a:hover {
+    color: #d94c2c;
+    text-decoration: none;
+}
+
+.btn {
+    background:#6d1703;
+    color: #f5f2f0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 900px;
+}
+
+
+/* HOME
+------------------------------------*/
+
+body.home {
+    background: url(../images/fireplace-background.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .content-wrapper {
+    flex: 1 0 auto;
+}
+
+.content-bg {
+    background: #fffef4e6;
+    padding: 30px;
+}
+
+@media screen and (max-width:650px) {
+    .home .content-wrapper {
+        padding: 10px;
+    }
+    .content-bg {
+        padding: 20px;
+    }
+}
+
+
+/* JOURNAL-MAIN PAGE
+------------------------------------*/
+.journal-main header::before {
+    background: url(../images/fireplace-background.jpg) center;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 375px;
+}
+
+.prompt-section {
+    margin-bottom: 50px;
+    padding: 15px;
+    background-color: #fffef4e6;
+}
+
+.prompt-section h2 {
+    border-bottom: 2px dashed #6d1703;
+}
+
+.download-link {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-size: 1.6rem;
+}
+
+/* will be applied to any screen 1200px or smaller */
+@media screen and (max-width:1200px) {
+    .download-link {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .journal-main header::before {
+        height: 200px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.3rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+
+/* PROMPT PAGES
+------------------------------------*/
+.prompt-response {
+    width: 95%;
+    min-height: 100px;
+    resize: vertical;
+}
+
+.prompt-user-entry-section {
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #6d1703;
+    margin-bottom: 50px;
+}
+
+.posted-response {
+    margin: 40px 0;
+    padding: 5px 10px;
+    /* border: 2px dashed #6d1703; */
+    background-color: #ddd6cc;
+}
+
+
+/* FOOTER
+------------------------------------*/
+footer {
+    background: #252930;
+    color: #f5f2f0;
+    /* display: flex;
+    justify-content: space-between;
+    padding: 0 20px; */
+}
+
+.socials {
+    list-style-type: none; /* removes bullet points */
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.socials img { /* selects img tag in socials class */
+    width: 32px;
+}
+
+.socials img:hover {
+    opacity: 50%;
+}
+
+@media screen and (min-width:860px) { /* 860px and larger */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:859px) {
+    footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
